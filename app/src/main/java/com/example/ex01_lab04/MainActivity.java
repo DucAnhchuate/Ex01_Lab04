@@ -1,4 +1,4 @@
-package com.example.ex04_lab04;
+package com.example.ex01_lab04;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,8 +9,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
-    String[] data;
+    ArrayList<String> data = new ArrayList<>();
     ArrayAdapter<String> adapter;
     ListView listView;
     @Override
@@ -20,7 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.listview);
 
-        data = new String[] {"item 1", "item 2", "item 3"};
+        int n = new Random().nextInt(20) + 1;
+
+        for (int i = 0; i < n; i++){
+            data.add("Item " + i);
+        }
 
         adapter = new ArrayAdapter<String>(
                 this,

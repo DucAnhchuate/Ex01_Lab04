@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.ex04_lab04'
+    namespace 'com.example.ex01_lab04'
     compileSdk 33
 
     defaultConfig {
